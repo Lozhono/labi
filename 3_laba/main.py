@@ -18,7 +18,7 @@ def generate_key(length, characters):
     for _ in range(length):
         key += characters[rand(len(characters) - 1)]
     return key
-
+#eeeee
 
 """IP в число"""
 def to_int32(n):

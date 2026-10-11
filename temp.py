@@ -1,1 +1,0 @@
-print(type(1).__name__)

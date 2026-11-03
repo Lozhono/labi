@@ -1,12 +1,12 @@
 #1
-def seq(*funcs):
+def seq(*args):
     def inner(arg):
         if isinstance(arg, (int, float)):
             result = arg
-            for f in reversed(funcs):
+            for f in reversed(args):
                 result = f(result)
             return result
-        return seq(*funcs, arg)
+        return seq(*args, arg)
     return inner
 
 #2

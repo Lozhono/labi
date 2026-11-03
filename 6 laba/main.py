@@ -1,12 +1,12 @@
 # 1
-def pipe(*fns):
-    for fn in fns:
+def pipe(*args):
+    for fn in args:
         if not callable(fn):
             raise TypeError('arguments must be func')
 
     def composed(x):
         result = x
-        for fn in fns:
+        for fn in args:
             result = fn(result)
         return result
     return composed
